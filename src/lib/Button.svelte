@@ -1,24 +1,12 @@
 <script>
 	// Empty script tag
+	import { twMerge } from 'tailwind-merge';
 </script>
 
 <button
-	class="
-        inline-flex
-        py-3 px-6
-        items-start
-        gap-2.5
-        rounded-full
-        transition
-        focus:outline-none
-
-        bg-primary-500
-        hover:bg-teal-500
-        focus:bg-teal-500
-        active:bg-teal-700
-
-        
-    "
+	class={twMerge(
+		'text-primary-500 border-current border p-3 px-6 rounded-full text-xl font-medium text-center'
+	)}
 >
 	<slot />
 </button>

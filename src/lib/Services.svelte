@@ -2,9 +2,9 @@
 	import Service from './Service.svelte';
 </script>
 
-<section class="flex flex-col gap-20 py-10">
+<section class="flex flex-col gap-20 px-5">
 	<h2 class="font-semibold text-4xl">What I Do</h2>
-	<div class="flex flex-col md:flex-row gap-10 justify-between">
+	<div class="grid grid-cols-smart gap-10 justify-between">
 		<Service>
 			<img src="/fe.svg" alt="" class="max-w-xs" />
 			<h3 class="font-medium text-4xl text-center">Frontend Developer</h3>

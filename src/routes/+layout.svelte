@@ -1,8 +1,8 @@
 <script>
-	import Header from '../lib/Header.svelte';
 	import './styles.css';
 	import { page } from '$app/stores';
 	import Footer from '$lib/Footer.svelte';
+	import Header from '$lib/Header.svelte';
 </script>
 
 <svelte:head>

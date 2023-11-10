@@ -1,6 +1,11 @@
-<section class="flex flex-col gap-20 py-40">
+<script>
+	import DecorationImage from './DecorationImage.svelte';
+</script>
+
+<section class="flex flex-col gap-8 px-5">
 	<h2 class="font-semibold text-4xl">About me</h2>
-	<div class="flex justify-between">
+	<div class="grid md:grid-cols-2 justify-between">
+		<DecorationImage />
 		<div class="flex flex-col gap-8">
 			<p class="max-w-lg">
 				Hello! I'm Slaven, a passionate full-stack developer specializing in frontend development
@@ -26,18 +31,6 @@
 					>Discover my story</a
 				>
 			</div>
-		</div>
-		<div
-			class="image w-96 h-96 relative flex items-center border-2 rounded-full border-current justify-center"
-		>
-			<div class="h-3/5 w-3/5 absolute border-2 rounded-full border-current" />
-			<img
-				src="/me.jpeg"
-				alt=""
-				width={400}
-				height={400}
-				class="mix-blend-darken h-1/2 w-1/2 rounded-full"
-			/>
 		</div>
 	</div>
 </section>
