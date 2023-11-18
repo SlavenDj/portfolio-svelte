@@ -14,6 +14,12 @@
   },
   "devDependencies": {
     "@fontsource/fira-mono": "^4.5.10",
+    "@iconify/icons-ic": "^1.2.13",
+    "@iconify/icons-iconoir": "^1.2.30",
+    "@iconify/icons-ion": "^1.2.10",
+    "@iconify/icons-mdi": "^1.2.48",
+    "@iconify/icons-svg-spinners": "^1.2.0",
+    "@iconify/icons-vscode-icons": "^1.2.29",
     "@iconify/svelte": "^3.1.4",
     "@neoconfetti/svelte": "^1.0.0",
     "@storybook/addon-essentials": "^7.5.3",
@@ -52,6 +58,7 @@
     "clsx": "^2.0.0",
     "lucide-svelte": "^0.292.0",
     "storybook-vscode-component": "^1.0.9",
+    "svelte-i18n": "^4.0.0",
     "tailwind-merge": "^2.0.0",
     "tailwind-variants": "^0.1.18"
   }

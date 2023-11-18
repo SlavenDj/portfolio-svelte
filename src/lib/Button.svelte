@@ -1,12 +1,28 @@
-<script>
-	// Empty script tag
-	import { twMerge } from 'tailwind-merge';
+<script lang="ts">
+	import type { HTMLAttributes, HTMLButtonAttributes } from 'svelte/elements';
+	import { twMerge, type ClassNameValue } from 'tailwind-merge';
+
+	export let variant: 'primary' | 'secondary' = 'primary';
+	export let type: HTMLButtonAttributes['type'] = 'button';
+	let className = '';
+	let defaultStyle = 'text-center rounded-full active:scale-95 transition-all';
+	export { className as class };
+	const styles = {
+		primary: 'bg-primary-500 text-white p-3 px-6  text-xl font-semibold dark:bg-primary-700 ',
+		secondary: ' border-current border p-3 px-6  text-xl font-medium '
+	};
+
+	const c = twMerge(defaultStyle, styles[variant], className);
+	export let link: string | null = null;
+	export let prop: HTMLAttributes<HTMLButtonElement | HTMLAnchorElement> = {};
 </script>
 
-<button
-	class={twMerge(
-		'text-primary-500 border-current border p-3 px-6 rounded-full text-xl font-medium text-center'
-	)}
->
-	<slot />
-</button>
+{#if link}
+	<a href={link} class={c} {...prop}>
+		<slot />
+	</a>
+{:else}
+	<button class={c} on:click {type} {...prop}>
+		<slot />
+	</button>
+{/if}

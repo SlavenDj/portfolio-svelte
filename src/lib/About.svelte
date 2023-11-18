@@ -1,10 +1,11 @@
 <script>
+	import Button from './Button.svelte';
 	import DecorationImage from './DecorationImage.svelte';
 </script>
 
 <section class="flex flex-col gap-8 px-5">
 	<h2 class="font-semibold text-4xl">About me</h2>
-	<div class="grid md:grid-cols-2 justify-between">
+	<div class="grid lg:grid-cols-2 gap-12 justify-between">
 		<DecorationImage />
 		<div class="flex flex-col gap-8">
 			<p class="max-w-lg">
@@ -20,16 +21,9 @@
 				create impactful digital experiences. Let's collaborate and make a difference together.
 			</p>
 
-			<div class="flex gap-4">
-				<a
-					class="bg-primary-500 text-white p-3 px-6 rounded-full text-xl font-semibold text-center"
-					href="/contact">Get in touch</a
-				>
-				<a
-					href="/about"
-					class="text-primary-500 border-current border p-3 px-6 rounded-full text-xl font-medium text-center"
-					>Discover my story</a
-				>
+			<div class="flex gap-4 flex-col md:flex-row">
+				<Button link="/contact">Get in touch</Button>
+				<Button link="/about" variant="secondary">Discover my story</Button>
 			</div>
 		</div>
 	</div>

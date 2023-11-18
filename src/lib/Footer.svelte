@@ -1,12 +1,14 @@
 <script>
 	import Icon from '@iconify/svelte';
-
+	import twitterIcon from '@iconify/icons-mdi/twitter';
+	import linkedinIcon from '@iconify/icons-mdi/linkedin';
+	import githubIcon from '@iconify/icons-mdi/github';
 	let year = new Date().getFullYear();
 
 	let socialMedia = [
-		{ name: 'Twitter', link: 'https://twitter.com/Slaven_Dje', icon: 'mdi:twitter' },
-		{ name: 'LinkedIn', link: 'https://www.linkedin.com/in/slavendje', icon: 'mdi:linkedin' },
-		{ name: 'GitHub', link: 'https://github.com/SlavenDj', icon: 'mdi:github' }
+		{ name: 'Twitter', link: 'https://twitter.com/Slaven_Dje', icon: twitterIcon },
+		{ name: 'LinkedIn', link: 'https://www.linkedin.com/in/slavendje', icon: linkedinIcon },
+		{ name: 'GitHub', link: 'https://github.com/SlavenDj', icon: githubIcon }
 	];
 </script>
 

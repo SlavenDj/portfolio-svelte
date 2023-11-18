@@ -34,8 +34,8 @@
 	];
 </script>
 
-<div class="flex gap-4 justify-between">
+<section class="grid grid-cols-smart gap-10 justify-between px-5">
 	{#each projects as project (project.title)}
 		<ProjectCard {project} />
 	{/each}
-</div>
+</section>

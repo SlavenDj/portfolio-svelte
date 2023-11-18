@@ -1,4 +1,6 @@
 <script>
+	import Button from './Button.svelte';
+
 	let name = '';
 	let email = '';
 	let message = '';
@@ -49,12 +51,12 @@
 				/>
 			</div>
 
-			<button
+			<Button
 				type="submit"
 				class="bg-primary-500 text-white p-2 rounded hover:bg-opacity-90 transition"
 			>
 				Submit
-			</button>
+			</Button>
 		</form>
 	</div>
 </section>

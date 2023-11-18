@@ -1,5 +1,5 @@
 <script>
-	import Service from './Service.svelte';
+	import Service from './Card.svelte';
 </script>
 
 <section class="flex flex-col gap-20 px-5">
