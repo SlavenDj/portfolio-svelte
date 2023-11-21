@@ -20,7 +20,7 @@
 	{/if}
 	<Header pathname={$page.url.pathname} />
 
-	<main class=" mx-auto container">
+	<main class=" mx-auto container flex flex-col gap-8">
 		<slot />
 	</main>
 

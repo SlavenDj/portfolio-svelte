@@ -1,18 +1,21 @@
 <script>
 	import Button from './Button.svelte';
+	import Section from './components/Section.svelte';
 	import { HeroIcons } from './icons';
 	import Icon from '@iconify/svelte';
 	import { _ } from 'svelte-i18n';
 </script>
 
-<section class="min-h-screen flex flex-col md:relative -top-32 pb-8 px-5">
-	<div class="grid items-center md:grid-cols-2 gap-12 grow">
-		<div class="flex flex-col md:max-w-lg gap-8 md:order-none order-1">
+<Section class="-top-32 flex flex-col px-5 md:relative md:min-h-screen md:pb-8">
+	<div
+		class="grid grow grid-rows-[auto_1fr] items-center gap-12 md:h-auto md:grid-rows-none lg:grid-cols-2"
+	>
+		<div class="order-1 flex flex-col gap-8 md:max-w-lg lg:order-none">
 			<h1 class="text-5xl">{$_('home.hero.transformingIdeas')}</h1>
 			<div class="flex flex-col gap-6">
 				<p>{$_('home.hero.fullStackDeveloper')}</p>
 
-				<div class="flex md:items-center gap-6 flex-col md:flex-row items-stretch flex-wrap">
+				<div class="flex flex-col flex-wrap items-stretch gap-6 md:flex-row md:items-center">
 					<Button link="/projects" class="grow">{$_('home.hero.exploreWork')}</Button>
 					<Button class="grow" variant="secondary">{$_('home.hero.hireMe')}</Button>
 				</div>
@@ -22,16 +25,16 @@
 			data="/coding.svg"
 			aria-label="coding"
 			draggable="false"
-			class="md:justify-self-end justify-self-center w-full md:max-w-xl max-w-sm"
+			class="w-full max-w-sm justify-self-center lg:max-w-xl lg:justify-self-end"
 		/>
 	</div>
 
-	<div class="md:flex items-center justify-between hidden">
+	<div class="hidden items-center justify-between md:flex">
 		{#each HeroIcons as icon}
 			<Icon
 				{icon}
-				class="opacity-75 h-12 w-12 hover:saturate-100 hover:opacity-100 transition-all saturate-0 fill-current"
+				class="h-12 w-12 fill-current opacity-75 saturate-0 transition-all hover:opacity-100 hover:saturate-100"
 			/>
 		{/each}
 	</div>
-</section>
+</Section>

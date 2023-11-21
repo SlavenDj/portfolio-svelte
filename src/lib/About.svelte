@@ -1,9 +1,10 @@
 <script>
 	import Button from './Button.svelte';
 	import DecorationImage from './DecorationImage.svelte';
+	import Section from './components/Section.svelte';
 </script>
 
-<section class="flex flex-col gap-8 px-5">
+<Section class="flex flex-col gap-8 px-5">
 	<h2 class="font-semibold text-4xl">About me</h2>
 	<div class="grid lg:grid-cols-2 gap-12 justify-between">
 		<DecorationImage />
@@ -27,4 +28,4 @@
 			</div>
 		</div>
 	</div>
-</section>
+</Section>

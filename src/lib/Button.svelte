@@ -5,7 +5,7 @@
 	export let variant: 'primary' | 'secondary' = 'primary';
 	export let type: HTMLButtonAttributes['type'] = 'button';
 	let className = '';
-	let defaultStyle = 'text-center rounded-full active:scale-95 transition-all';
+	let defaultStyle = 'text-center rounded-full active:scale-95 transition-all hover:opacity-75';
 	export { className as class };
 	const styles = {
 		primary: 'bg-primary-500 text-white p-3 px-6  text-xl font-semibold dark:bg-primary-700 ',

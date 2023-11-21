@@ -1,6 +1,7 @@
 <script>
 	import Decorations from '$lib/Decorations.svelte';
 	import ProjectCard from '$lib/ProjectCard.svelte';
+	import Section from '$lib/components/Section.svelte';
 
 	let projects = [
 		{
@@ -29,10 +30,10 @@
 	<!-- Include the Decorations component for random shapes -->
 	<Decorations />
 
-	<section class="col-span-1 md:col-span-2 lg:col-span-3">
+	<Section class="col-span-1 md:col-span-2 lg:col-span-3">
 		<h1 class="text-4xl font-semibold mb-4">My Projects Portfolio</h1>
 		<p class="text-lg mb-6">{aboutText}</p>
-	</section>
+	</Section>
 
 	{#each projects as project (project.title)}
 		<div class="col-span-1 md:col-span-1 lg:col-span-1 mb-4">

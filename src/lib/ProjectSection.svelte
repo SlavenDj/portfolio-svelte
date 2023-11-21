@@ -1,6 +1,7 @@
 <!-- ProjectSection.svelte -->
 <script lang="ts">
 	import ProjectCard from './ProjectCard.svelte';
+	import Section from './components/Section.svelte';
 
 	// Define the project data
 	let projects = [
@@ -34,8 +35,8 @@
 	];
 </script>
 
-<section class="grid grid-cols-smart gap-10 justify-between px-5">
+<Section class="grid grid-cols-smart gap-10 justify-between px-5">
 	{#each projects as project (project.title)}
 		<ProjectCard {project} />
 	{/each}
-</section>
+</Section>

@@ -1,8 +1,9 @@
 <script>
 	import Service from './Card.svelte';
+	import Section from './components/Section.svelte';
 </script>
 
-<section class="flex flex-col gap-20 px-5">
+<Section class="flex flex-col gap-6 px-5">
 	<h2 class="font-semibold text-4xl">What I Do</h2>
 	<div class="grid grid-cols-smart gap-10 justify-between">
 		<Service>
@@ -33,4 +34,4 @@
 			</p>
 		</Service>
 	</div>
-</section>
+</Section>
