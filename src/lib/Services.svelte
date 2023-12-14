@@ -3,7 +3,7 @@
 	import Section from './components/Section.svelte';
 </script>
 
-<Section class="flex flex-col gap-6 px-5">
+<Section class="flex flex-col gap-6 px-5" id="services">
 	<h2 class="font-semibold text-4xl">What I Do</h2>
 	<div class="grid grid-cols-smart gap-10 justify-between">
 		<Service>

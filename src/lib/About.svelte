@@ -4,9 +4,9 @@
 	import Section from './components/Section.svelte';
 </script>
 
-<Section class="flex flex-col gap-8 px-5">
-	<h2 class="font-semibold text-4xl">About me</h2>
-	<div class="grid lg:grid-cols-2 gap-12 justify-between">
+<Section class="flex flex-col gap-8 px-5" id="about">
+	<h2 class="text-4xl font-semibold">About me</h2>
+	<div class="grid justify-between gap-12 lg:grid-cols-2">
 		<DecorationImage />
 		<div class="flex flex-col gap-8">
 			<p class="max-w-lg">
@@ -22,7 +22,7 @@
 				create impactful digital experiences. Let's collaborate and make a difference together.
 			</p>
 
-			<div class="flex gap-4 flex-col md:flex-row">
+			<div class="flex flex-col gap-4 md:flex-row">
 				<Button link="/contact">Get in touch</Button>
 				<Button link="/about" variant="secondary">Discover my story</Button>
 			</div>

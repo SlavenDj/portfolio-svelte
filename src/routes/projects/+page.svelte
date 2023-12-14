@@ -1,6 +1,7 @@
 <script>
 	import Decorations from '$lib/Decorations.svelte';
 	import ProjectCard from '$lib/ProjectCard.svelte';
+
 	import Section from '$lib/components/Section.svelte';
 
 	let projects = [
@@ -26,18 +27,18 @@
 	let aboutText = `Welcome to my projects portfolio! Here, you can explore some of the web development and design projects I've worked on. Each project showcases my skills in web design, frontend development, and UI/UX design.`;
 </script>
 
-<main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-8">
+<main class="grid grid-cols-1 gap-8 p-8 md:grid-cols-2 lg:grid-cols-3">
 	<!-- Include the Decorations component for random shapes -->
 	<Decorations />
 
 	<Section class="col-span-1 md:col-span-2 lg:col-span-3">
-		<h1 class="text-4xl font-semibold mb-4">My Projects Portfolio</h1>
-		<p class="text-lg mb-6">{aboutText}</p>
+		<h1 class="mb-4 text-4xl font-semibold">My Projects Portfolio</h1>
+		<p class="mb-6 text-lg">{aboutText}</p>
 	</Section>
 
 	{#each projects as project (project.title)}
-		<div class="col-span-1 md:col-span-1 lg:col-span-1 mb-4">
-			<div class="bg-white rounded-lg shadow-md p-4">
+		<div class="col-span-1 mb-4 md:col-span-1 lg:col-span-1">
+			<div class="p-4 bg-white rounded-lg shadow-md">
 				<ProjectCard {project} />
 			</div>
 		</div>

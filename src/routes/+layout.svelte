@@ -13,14 +13,14 @@
 	<title>My Portfolio</title>
 </svelte:head>
 <div
-	class="bg-secondary-100 mx-auto min-h-screen text-primary-900 dark:bg-primary-900 dark:text-secondary-100"
+	class="min-h-screen bg-secondary-100 text-primary-900 dark:bg-primary-900 dark:text-secondary-100"
 >
 	{#if isLoading}
 		<LoadingScreen />
 	{/if}
 	<Header pathname={$page.url.pathname} />
 
-	<main class=" mx-auto container flex flex-col gap-8">
+	<main class="max-w-7xl flex flex-col gap-8 mx-auto scroll-smooth [&>*]:px-12">
 		<slot />
 	</main>
 

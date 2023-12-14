@@ -7,7 +7,9 @@ const config = {
 	// for more information about preprocessors
 	preprocess: vitePreprocess(),
 	vitePlugin: {
-		inspector: true
+		inspector: {
+			toggleKeyCombo: 'meta-shift-e'
+		}
 	},
 	kit: {
 		alias: {

@@ -12,40 +12,45 @@
 	export let pathname = '';
 </script>
 
-<header class=" sticky top-0 py-8 bg-inherit z-20 px-4">
-	<div class="container flex justify-between items-center mx-auto">
+<header
+	class="sticky top-0 z-20 px-4 py-8 backdrop-blur-lg bg-secondary-100/60 dark:bg-primary-900/60"
+>
+	<div class="flex items-center justify-between mx-auto max-w-7xl">
 		<a
-			class="w-14 h-14 rounded-full bg-primary-500 relative z-50"
+			class="relative z-50 rounded-full w-14 h-14 bg-primary-500"
 			href="/"
 			aria-label="home"
-			on:click={toggleMenu}
+			on:click={() => {
+				isMenuOpen = false;
+			}}
 		/>
 
 		<nav
-			class="w-full flex lg:flex flex-col lg:flex-row items-center lg:justify-end justify-center absolute inset-0 h-screen lg:h-auto bg-secondary-100 dark:bg-secondary-900 lg:bg-transparent lg:static gap-8 px-8 lg:px-0"
+			class="absolute inset-0 flex flex-col items-center justify-center w-full h-screen gap-8 px-8 lg:flex lg:flex-row lg:justify-end lg:h-auto bg-secondary-100 dark:bg-secondary-900 lg:bg-transparent lg:static lg:px-0"
 			class:hidden={!isMenuOpen}
 		>
-			<ul class="flex flex-col lg:flex-row gap-4 w-full justify-center">
+			<ul class="flex flex-col justify-center w-full gap-4 lg:flex-row">
 				{#each pages as page}
+					{@const active = pathname === page.href}
 					<li aria-current={pathname === page.href ? 'page' : undefined}>
 						<a
 							on:click={toggleMenu}
 							href={page.href}
-							class="p-3 py-1 block rounded-full hover:bg-secondary-500/50"
-							class:bg-secondary-500={pathname === page.href}
-							class:text-tertiary-500={pathname === page.href}
-							class:font-semibold={pathname === page.href}
+							class="block p-3 py-1 rounded-full hover:bg-secondary-500/50"
+							class:bg-secondary-500={active}
+							class:text-tertiary-500={active}
+							class:font-semibold={active}
 						>
-							{page.title}
+							{page.label}
 						</a>
 					</li>
 				{/each}
 			</ul>
-			<ul class="flex items-center gap-4">
+			<ul class="flex items-center gap-6">
 				{#each socialMediaLinks as link}
 					<li>
 						<a href={link.href}>
-							<Icon icon={link.icon} class="h-6 w-6" />
+							<Icon icon={link.icon} class="w-6 h-6" />
 						</a>
 					</li>
 				{/each}
@@ -55,14 +60,14 @@
 		<!-- Social Icons -->
 
 		<button
-			class="lg:hidden p-2 bg-black/20 rounded-full z-20"
+			class="z-20 p-2 rounded-full lg:hidden bg-black/20"
 			class:bg-secondary-500={isMenuOpen}
 			on:click={toggleMenu}
 		>
 			{#if isMenuOpen}
-				<Icon icon={roundClose} class="h-6 w-6" />
+				<Icon icon={roundClose} class="w-6 h-6" />
 			{:else}
-				<Icon icon={roundMenu} class="h-6 w-6" />
+				<Icon icon={roundMenu} class="w-6 h-6" />
 			{/if}
 		</button>
 	</div>

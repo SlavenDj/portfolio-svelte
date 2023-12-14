@@ -1,31 +1,39 @@
-export const pages = [
+type Link = {
+	label: string;
+	href: string;
+};
+export const pages: Link[] = [
 	{
-		title: 'About',
-		href: '/about'
+		label: 'Home',
+		href: '/'
 	},
 	{
-		title: 'Projects',
+		label: 'About',
+		href: '/#about'
+	},
+	{
+		label: 'Projects',
 		href: '/projects'
 	},
 	{
-		title: 'Services',
-		href: '/services'
+		label: 'Services',
+		href: '/#services'
 	},
 	{
-		title: 'Contact',
+		label: 'Contact',
 		href: '/contact'
 	},
 
 	{
-		title: 'Resume/CV',
+		label: 'Resume/CV',
 		href: '/resume'
 	},
 	{
-		title: 'Blog',
+		label: 'Blog',
 		href: '/blog'
 	},
 	{
-		title: 'Linktree',
+		label: 'Linktree',
 		href: '/linktree'
 	}
 ];
