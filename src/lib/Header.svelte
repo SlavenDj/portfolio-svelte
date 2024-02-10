@@ -26,7 +26,7 @@
 		/>
 
 		<nav
-			class="absolute inset-0 flex flex-col items-center justify-center w-full h-screen gap-8 px-8 lg:flex lg:flex-row lg:justify-end lg:h-auto bg-secondary-100 dark:bg-secondary-900 lg:bg-transparent lg:static lg:px-0"
+			class="absolute inset-0 flex flex-col items-center justify-center w-full h-screen gap-8 px-8 bg-transparent lg:flex lg:flex-row lg:justify-end lg:h-auto bg-secondary-100 dark:bg-secondary-900 lg:static lg:px-0 lg:!bg-transparent"
 			class:hidden={!isMenuOpen}
 		>
 			<ul class="flex flex-col justify-center w-full gap-4 lg:flex-row">
