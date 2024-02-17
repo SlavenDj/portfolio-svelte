@@ -21,7 +21,7 @@
 	{/if}
 	<Header pathname={$page.url.pathname} />
 
-	<main class="max-w-7xl flex flex-col gap-8 mx-auto scroll-smooth [&>*]:px-12">
+	<main class="max-w-7xl flex flex-col gap-8 mx-auto scroll-smooth md:[&>*]:px-12 [&>*]:px-5">
 		<slot />
 	</main>
 
