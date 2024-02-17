@@ -5,7 +5,7 @@ type Link = {
 export const pages: Link[] = [
 	{
 		label: 'Home',
-		href: '/'
+		href: '/#'
 	},
 	{
 		label: 'About',
@@ -13,13 +13,13 @@ export const pages: Link[] = [
 	},
 	{
 		label: 'Projects',
-		href: '/projects'
+		href: '/#projects'
 	},
 	{
 		label: 'Services',
 		href: '/#services'
 	},
-	{
+	/* {
 		label: 'Contact',
 		href: '/contact'
 	},
@@ -27,14 +27,14 @@ export const pages: Link[] = [
 	{
 		label: 'Resume/CV',
 		href: '/resume'
-	},
+	}, */
 	{
 		label: 'Blog',
 		href: '/blog'
 	},
 	{
 		label: 'Linktree',
-		href: '/linktree'
+		href: 'https://linktr.ee/slavend'
 	}
 ];
 export const socialMediaLinks = [

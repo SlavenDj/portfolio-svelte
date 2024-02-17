@@ -1,11 +1,12 @@
 <script>
-	import './styles.css';
 	import { page } from '$app/stores';
 	import Footer from '$lib/Footer.svelte';
 	import Header from '$lib/Header.svelte';
 	import { onMount } from 'svelte';
 	import LoadingScreen from '$lib/loadingScreen.svelte';
+	import './styles.css';
 	let isLoading = true;
+
 	onMount(() => (isLoading = false));
 </script>
 

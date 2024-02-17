@@ -10,8 +10,8 @@
 		<DecorationImage />
 		<div class="flex flex-col gap-8">
 			<p class="max-w-lg">
-				Hello! I'm Slaven, a passionate full-stack developer specializing in frontend development
-				and UI/UX design. My journey began in primary-500 school, where my curiosity and fascination
+				Hello! I'm Slaven, a passionate Full Stack developer specializing in frontend development
+				and UI/UX design. My journey began in primary school, where my curiosity and fascination
 				with technology ignited. From an early age, I was captivated by the power of coding and
 				design to transform ideas into immersive digital experiences. Throughout my educational
 				journey, I proactively delved deeper into programming and design concepts, teaching myself

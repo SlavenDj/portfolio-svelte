@@ -12,9 +12,9 @@
 	];
 </script>
 
-<footer class="bg-gray-800 text-white py-6">
-	<div class="container mx-auto px-4 max-w-7xl">
-		<div class="flex justify-between items-center">
+<footer class="py-6 text-white bg-gray-800">
+	<div class="container px-4 mx-auto max-w-7xl">
+		<div class="flex items-center justify-between">
 			<div>
 				Email: <a href="mailto:slavendjervida@gmail.com">slavendjervida@gmail.com</a>
 			</div>
@@ -24,18 +24,18 @@
 				{#each socialMedia as platform (platform.name)}
 					<a
 						href={platform.link}
-						class="text-gray-300 hover:text-white"
+						class=" hover:text-primary-500"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						<Icon icon={platform.icon} />
+						<Icon icon={platform.icon} class="w-8 h-8" />
 					</a>
 				{/each}
 			</div>
 		</div>
 
 		<!-- Copyright -->
-		<div class="text-center mt-4">
+		<div class="mt-4 text-center">
 			<p>&copy; {year} My Portfolio. All rights reserved.</p>
 		</div>
 	</div>

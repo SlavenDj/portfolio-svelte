@@ -6,12 +6,10 @@
 
 	let projects = [
 		{
-			title: 'Project 1',
-			description: 'Description of Project 1',
-			tags: ['Web Design', 'Frontend', 'UI/UX'],
-			imageUrl: 'project1.jpg',
-			websiteUrl: 'https://example.com/project1',
-			githubUrl: 'https://github.com/user/project1'
+			title: 'PsychAssist',
+			description: `Our project is about creating a mobile app for therapists and their clients. We're using React Native to build the app, ensuring it works well on different phones. To keep everyone's information safe, we're using a special encryption method called pgsodium. This means all the data is protected, even if it's stored in our PostgreSQL database. Our goal is to make it easy for therapists and clients to communicate and work together in a secure way.`,
+			tags: ['Database'],
+			imageUrl: 'project1.jpg'
 		},
 		{
 			title: 'Project 2',
