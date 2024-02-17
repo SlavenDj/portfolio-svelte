@@ -29,11 +29,14 @@
 		<div class="gradient-1" />
 		<div class="gradient-2" />
 		{#await fetchImageURL()}
-			<!-- promise is pending -->
 			<div class="absolute inset-0 grid place-items-center animate-pulse">loading...</div>
 		{:then value}
 			<div class="absolute bg-white inset-1.5 rounded-3xl">
-				<img src={value} alt="me" class="object-cover w-full h-full rounded-3xl" />
+				<img
+					src={value}
+					alt="Preview of {url} on iPhone"
+					class="object-cover w-full h-full rounded-3xl"
+				/>
 			</div>
 		{/await}
 	</div>
@@ -47,7 +50,11 @@
 						{#await fetchImageURL()}
 							<img class="absolute object-cover h-full animate-pulse" src="/macosbg.jpg" alt="" />
 						{:then value}
-							<img src={value} alt="me" class="absolute inset-0 object-cover" />
+							<img
+								src={value}
+								alt="Preview of {url} on Macbook"
+								class="absolute inset-0 object-cover"
+							/>
 						{/await}
 					</div>
 				</div>
