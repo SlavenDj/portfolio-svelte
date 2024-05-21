@@ -1,7 +1,7 @@
 export const projects = [
 	{
 		title: 'PsychAssist',
-		description: `PsychAssist is an AI enhanced mood tracking and jounraling app that helps therapist identify and adress mental health problems faster while building a strong relationship with their clients`,
+		description: `PsychAssist is an AI enhanced mood tracking and journaling app that helps therapist identify and address mental health problems faster while building a strong relationship with their clients`,
 		tags: ['Database'],
 		imageUrl: '/app_mockup.jpeg',
 		isImgAIGen: true

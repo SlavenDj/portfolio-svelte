@@ -5,7 +5,7 @@ type Link = {
 export const pages: Link[] = [
 	{
 		label: 'Home',
-		href: '/#'
+		href: '/'
 	},
 	{
 		label: 'About',
