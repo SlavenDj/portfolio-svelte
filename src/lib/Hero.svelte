@@ -1,7 +1,7 @@
 <script>
-	import Button from './Button.svelte';
 	import DecorationImage from './DecorationImage.svelte';
 	import Section from './components/Section.svelte';
+	import Button from './components/ui/button/button.svelte';
 	import { HeroIcons } from './icons';
 	import Icon from '@iconify/svelte';
 	import { _ } from 'svelte-i18n';
@@ -17,7 +17,7 @@
 				<p>{$_('home.hero.fullStackDeveloper')}</p>
 
 				<div class="flex flex-col flex-wrap items-stretch gap-6 md:flex-row md:items-center">
-					<Button link="/projects" class="grow">{$_('home.hero.exploreWork')}</Button>
+					<Button class="grow">{$_('home.hero.exploreWork')}</Button>
 					<Button class="grow" variant="secondary">{$_('home.hero.resume_cv')}</Button>
 				</div>
 			</div>
