@@ -1,0 +1,178 @@
+🔎 checking possible migrations..
+
+🔎 found a 'remove-argtypes-regex' migration:
+╭ Manual migration detected ───────────────────────────────────────────────────────────────────╮
+│                                                                                              │
+│   Attention: We've detected that you're using argTypesRegex:                                 │
+│                                                                                              │
+│   .storybook/preview.ts                                                                      │
+│     3 | const preview: Preview = {                                                           │
+│     4 | 	parameters: {                                                                        │
+│   > 5 | 		actions: { argTypesRegex: '^on[A-Z].*' },                                            │
+│       | 		                 ^^^^^^^^^^^^^                                                       │
+│     6 | 		controls: {                                                                          │
+│     7 | 			matchers: {                                                                          │
+│     8 | 				color: /(background|color)$/i,                                                       │
+│                                                                                              │
+│   Storybook's play functions let you render your stories interactively.                      │
+│                                                                                              │
+│   In the past, play functions mocked action args implicitly by analyzing the argTypesRegex   │
+│   in your preview.js|ts file.                                                                │
+│                                                                                              │
+│   However, Storybook 8 changes this behavior, and we now recommend using the                 │
+│   (fn) function to mock your component's methods instead.                                    │
+│                                                                                              │
+│   Use the following command to check for implied mocked actions in your play functions:      │
+│   npx storybook migrate find-implicit-spies --glob="**/*.stories.@(js|jsx|ts|tsx)"           │
+│                                                                                              │
+│   Then, refer to our docs to migrate your play functions to Storybook 8:                     │
+│   https://storybook.js.org/docs/8.0/essentials/actions#via-storybooktest-fn-spy-function     │
+│                                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+
+? Select continue once you have made the required changes, or quit to exit the migration process › quit / continue✔ Select continue once you have made the required changes, or quit to exit the migration process … quit / continue
+
+🔎 found a 'github-flavored-markdown-mdx' migration:
+╭ Automigration detected ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                   │
+│   In MDX1 you had the option of using GitHub flavored markdown.                                                                                   │
+│                                                                                                                                                   │
+│   Storybook >= 8.0 uses MDX3 for compiling MDX, and thus no longer supports GFM out of the box.                                                   │
+│   Because of this you need to explicitly add the GFM plugin in the addon-docs options:                                                            │
+│   https://storybook.js.org/docs/writing-docs/mdx#markdown-tables-arent-rendering-correctly                                                        │
+│                                                                                                                                                   │
+│   We recommend that you follow the guide in the link above; however, we can add a temporary Storybook addon to help make this migration easier.   │
+│   We'll install the addon and add it to your storybook config.                                                                                    │
+│                                                                                                                                                   │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+? Do you want to run the 'github-flavored-markdown-mdx' migration on your project? › (Y/n)✔ Do you want to run the 'github-flavored-markdown-mdx' migration on your project? … yes
+
+An error occurred while installing dependencies:
+PNPM error
+
+Please check the logfile generated at ./storybook.log for troubleshooting and try again.
+❌ error when running github-flavored-markdown-mdx migration
+HandledError: Error: PNPM error
+
+Please check the logfile generated at ./storybook.log for troubleshooting and try again.
+    at PNPMProxy.addDependencies (/Users/slavendjervida/Library/Caches/pnpm/dlx/2k7fafzkdikbiwy4z7fkz5thfy/18f9d9c781c-a88/node_modules/.pnpm/@storybook+core-common@8.1.2_prettier@3.2.5/node_modules/@storybook/core-common/dist/index.js:33:75)
+    at async Object.run (/Users/slavendjervida/Library/Caches/pnpm/dlx/2k7fafzkdikbiwy4z7fkz5thfy/18f9d9c781c-a88/node_modules/.pnpm/@storybook+cli@8.1.2_@babel+preset-env@7.24.5_@babel+core@7.24.5__react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@storybook/cli/dist/generate.js:227:231)
+    ... 3 lines matching cause stack trace ...
+    at async Command.<anonymous> (/Users/slavendjervida/Library/Caches/pnpm/dlx/2k7fafzkdikbiwy4z7fkz5thfy/18f9d9c781c-a88/node_modules/.pnpm/@storybook+cli@8.1.2_@babel+preset-env@7.24.5_@babel+core@7.24.5__react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@storybook/cli/dist/generate.js:706:2872) {
+  handled: true,
+  cause: Error: PNPM error
+  
+  Please check the logfile generated at ./storybook.log for troubleshooting and try again.
+      at PNPMProxy.runAddDeps (/Users/slavendjervida/Library/Caches/pnpm/dlx/2k7fafzkdikbiwy4z7fkz5thfy/18f9d9c781c-a88/node_modules/.pnpm/@storybook+core-common@8.1.2_prettier@3.2.5/node_modules/@storybook/core-common/dist/index.js:37:4912)
+      at async PNPMProxy.addDependencies (/Users/slavendjervida/Library/Caches/pnpm/dlx/2k7fafzkdikbiwy4z7fkz5thfy/18f9d9c781c-a88/node_modules/.pnpm/@storybook+core-common@8.1.2_prettier@3.2.5/node_modules/@storybook/core-common/dist/index.js:32:927)
+      at async Object.run (/Users/slavendjervida/Library/Caches/pnpm/dlx/2k7fafzkdikbiwy4z7fkz5thfy/18f9d9c781c-a88/node_modules/.pnpm/@storybook+cli@8.1.2_@babel+preset-env@7.24.5_@babel+core@7.24.5__react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@storybook/cli/dist/generate.js:227:231)
+      at async runFixes (/Users/slavendjervida/Library/Caches/pnpm/dlx/2k7fafzkdikbiwy4z7fkz5thfy/18f9d9c781c-a88/node_modules/.pnpm/@storybook+cli@8.1.2_@babel+preset-env@7.24.5_@babel+core@7.24.5__react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@storybook/cli/dist/generate.js:636:1794)
+      at async automigrate (/Users/slavendjervida/Library/Caches/pnpm/dlx/2k7fafzkdikbiwy4z7fkz5thfy/18f9d9c781c-a88/node_modules/.pnpm/@storybook+cli@8.1.2_@babel+preset-env@7.24.5_@babel+core@7.24.5__react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@storybook/cli/dist/generate.js:634:1629)
+      at async doAutomigrate (/Users/slavendjervida/Library/Caches/pnpm/dlx/2k7fafzkdikbiwy4z7fkz5thfy/18f9d9c781c-a88/node_modules/.pnpm/@storybook+cli@8.1.2_@babel+preset-env@7.24.5_@babel+core@7.24.5__react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@storybook/cli/dist/generate.js:634:651)
+      at async Command.<anonymous> (/Users/slavendjervida/Library/Caches/pnpm/dlx/2k7fafzkdikbiwy4z7fkz5thfy/18f9d9c781c-a88/node_modules/.pnpm/@storybook+cli@8.1.2_@babel+preset-env@7.24.5_@babel+core@7.24.5__react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@storybook/cli/dist/generate.js:706:2872)
+}
+
+
+🔎 found a 'remove-react-dependency' migration:
+╭ Manual migration detected ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                        │
+│   We detected that your project has a dependency for "react" that it might not need.                                                                                                   │
+│   Nothing breaks by having it, you can safely ignore this message, if you wish.                                                                                                        │
+│                                                                                                                                                                                        │
+│   Storybook asked you to add "react" as a direct dependency in the past when upgrading from Storybook 6 to 7.                                                                          │
+│   However, since version 8.0, Storybook no longer requires you to provide "react" as a dependency.                                                                                     │
+│   Some community addons might still wrongfully list "react" and "react-dom" as required peer dependencies, but since Storybook 7.6 it should not be needed in the majority of cases.   │
+│                                                                                                                                                                                        │
+│   If you know you are not using React outside of Storybook, it should be safe to remove the "react" and "react-dom" dependencies from your project's package.json.                     │
+│   Storybook cannot do this automatically as removing it might break your project, so it should be done manually with care.                                                             │
+│                                                                                                                                                                                        │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+? Select continue once you have made the required changes, or quit to exit the migration process › quit / continue✔ Select continue once you have made the required changes, or quit to exit the migration process … quit / continue
+
+🔎 found a 'visual-tests-addon' migration:
+╭ Automigration detected ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                                      │
+│   New to Storybook 8: Storybook's Visual Tests addon helps you catch unintentional changes/bugs in your stories. The addon is powered by Chromatic, a cloud-based testing tool developed by Storybook's core team.   │
+│                                                                                                                                                                                                                      │
+│   Learn more: storybook.js.org/docs/writing-tests/visual-testing                                                                                                                                                     │
+│                                                                                                                                                                                                                      │
+│   Install Visual Tests addon in your project?                                                                                                                                                                        │
+│                                                                                                                                                                                                                      │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+? Do you want to run the 'visual-tests-addon' migration on your project? › (Y/n)✔ Do you want to run the 'visual-tests-addon' migration on your project? … yes
+
+An error occurred while installing dependencies:
+PNPM error
+
+Please check the logfile generated at ./storybook.log for troubleshooting and try again.
+❌ error when running visual-tests-addon migration
+HandledError: Error: PNPM error
+
+Please check the logfile generated at ./storybook.log for troubleshooting and try again.
+    at PNPMProxy.addDependencies (/Users/slavendjervida/Library/Caches/pnpm/dlx/2k7fafzkdikbiwy4z7fkz5thfy/18f9d9c781c-a88/node_modules/.pnpm/@storybook+core-common@8.1.2_prettier@3.2.5/node_modules/@storybook/core-common/dist/index.js:33:75)
+    at async Object.run (/Users/slavendjervida/Library/Caches/pnpm/dlx/2k7fafzkdikbiwy4z7fkz5thfy/18f9d9c781c-a88/node_modules/.pnpm/@storybook+cli@8.1.2_@babel+preset-env@7.24.5_@babel+core@7.24.5__react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@storybook/cli/dist/generate.js:554:141)
+    ... 3 lines matching cause stack trace ...
+    at async Command.<anonymous> (/Users/slavendjervida/Library/Caches/pnpm/dlx/2k7fafzkdikbiwy4z7fkz5thfy/18f9d9c781c-a88/node_modules/.pnpm/@storybook+cli@8.1.2_@babel+preset-env@7.24.5_@babel+core@7.24.5__react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@storybook/cli/dist/generate.js:706:2872) {
+  handled: true,
+  cause: Error: PNPM error
+  
+  Please check the logfile generated at ./storybook.log for troubleshooting and try again.
+      at PNPMProxy.runAddDeps (/Users/slavendjervida/Library/Caches/pnpm/dlx/2k7fafzkdikbiwy4z7fkz5thfy/18f9d9c781c-a88/node_modules/.pnpm/@storybook+core-common@8.1.2_prettier@3.2.5/node_modules/@storybook/core-common/dist/index.js:37:4912)
+      at async PNPMProxy.addDependencies (/Users/slavendjervida/Library/Caches/pnpm/dlx/2k7fafzkdikbiwy4z7fkz5thfy/18f9d9c781c-a88/node_modules/.pnpm/@storybook+core-common@8.1.2_prettier@3.2.5/node_modules/@storybook/core-common/dist/index.js:32:927)
+      at async Object.run (/Users/slavendjervida/Library/Caches/pnpm/dlx/2k7fafzkdikbiwy4z7fkz5thfy/18f9d9c781c-a88/node_modules/.pnpm/@storybook+cli@8.1.2_@babel+preset-env@7.24.5_@babel+core@7.24.5__react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@storybook/cli/dist/generate.js:554:141)
+      at async runFixes (/Users/slavendjervida/Library/Caches/pnpm/dlx/2k7fafzkdikbiwy4z7fkz5thfy/18f9d9c781c-a88/node_modules/.pnpm/@storybook+cli@8.1.2_@babel+preset-env@7.24.5_@babel+core@7.24.5__react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@storybook/cli/dist/generate.js:636:1794)
+      at async automigrate (/Users/slavendjervida/Library/Caches/pnpm/dlx/2k7fafzkdikbiwy4z7fkz5thfy/18f9d9c781c-a88/node_modules/.pnpm/@storybook+cli@8.1.2_@babel+preset-env@7.24.5_@babel+core@7.24.5__react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@storybook/cli/dist/generate.js:634:1629)
+      at async doAutomigrate (/Users/slavendjervida/Library/Caches/pnpm/dlx/2k7fafzkdikbiwy4z7fkz5thfy/18f9d9c781c-a88/node_modules/.pnpm/@storybook+cli@8.1.2_@babel+preset-env@7.24.5_@babel+core@7.24.5__react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@storybook/cli/dist/generate.js:634:651)
+      at async Command.<anonymous> (/Users/slavendjervida/Library/Caches/pnpm/dlx/2k7fafzkdikbiwy4z7fkz5thfy/18f9d9c781c-a88/node_modules/.pnpm/@storybook+cli@8.1.2_@babel+preset-env@7.24.5_@babel+core@7.24.5__react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@storybook/cli/dist/generate.js:706:2872)
+}
+
+
+🔎 found a 'autodocs-tags' migration:
+╭ Automigration detected ───────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                   │
+│   The docs.autodocs setting in .storybook/main.ts is deprecated.                                                  │
+│                                                                                                                   │
+│   Learn more: https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#mainjs-docsautodocs-is-deprecated   │
+│                                                                                                                   │
+│   Remove docs.autodocs?                                                                                           │
+│                                                                                                                   │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+? Do you want to run the 'autodocs-tags' migration on your project? › (Y/n)✔ Do you want to run the 'autodocs-tags' migration on your project? … yes
+✅ Removing "docs.autodocs" from .storybook/main.ts
+✅ ran autodocs-tags migration
+
+╭ Migration check ran with failures ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                               │
+│   Successful migrations:                                                                                                                                      │
+│                                                                                                                                                               │
+│   autodocs-tags                                                                                                                                               │
+│                                                                                                                                                               │
+│   Failed migrations:                                                                                                                                          │
+│                                                                                                                                                               │
+│   github-flavored-markdown-mdx:                                                                                                                               │
+│   Error: PNPM error                                                                                                                                           │
+│                                                                                                                                                               │
+│   Please check the logfile generated at ./storybook.log for troubleshooting and try again.                                                                    │
+│   visual-tests-addon:                                                                                                                                         │
+│   Error: PNPM error                                                                                                                                           │
+│                                                                                                                                                               │
+│   Please check the logfile generated at ./storybook.log for troubleshooting and try again.                                                                    │
+│                                                                                                                                                               │
+│   You can find the full logs in /Users/slavendjervida/portfolio-svelte/migration-storybook.log                                                                │
+│                                                                                                                                                               │
+│   Manual migrations:                                                                                                                                          │
+│                                                                                                                                                               │
+│   remove-argtypes-regex, remove-react-dependency                                                                                                              │
+│                                                                                                                                                               │
+│   ─────────────────────────────────────────────────                                                                                                           │
+│                                                                                                                                                               │
+│   If you'd like to run the migrations again, you can do so by running 'npx storybook automigrate'                                                             │
+│                                                                                                                                                               │
+│   The automigrations try to migrate common patterns in your project, but might not contain everything needed to migrate to the latest version of Storybook.   │
+│                                                                                                                                                               │
+│   Please check the changelog and migration guide for manual migrations and more information: https://storybook.js.org/docs/8.0/migration-guide                │
+│   And reach out on Discord if you need help: https://discord.gg/storybook                                                                                     │
+│                                                                                                                                                               │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+

@@ -1,0 +1,10 @@
+Progress: resolved 0, reused 1, downloaded 0, added 0
+Progress: resolved 41, reused 41, downloaded 0, added 0
+Progress: resolved 1053, reused 1008, downloaded 1, added 0
+Progress: resolved 1115, reused 1069, downloaded 1, added 0
+Packages: +5
++++++
+Progress: resolved 1115, reused 1069, downloaded 3, added 5, done
+ EACCES  EACCES: permission denied, unlink '/Users/slavendjervida/portfolio-svelte/node_modules/.pnpm/node_modules/@vitest/utils'
+
+pnpm: EACCES: permission denied, unlink '/Users/slavendjervida/portfolio-svelte/node_modules/.pnpm/node_modules/@vitest/utils'
