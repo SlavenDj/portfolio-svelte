@@ -35,7 +35,7 @@
 		{#if project.websiteUrl}
 			<Mockup url={project.websiteUrl} {...macbookProps} />
 		{:else}
-			<img
+			<enhanced:img
 				src={project.imageUrl}
 				alt={project.title}
 				class="object-cover w-full rounded-lg md:max-w-xs aspect-square"

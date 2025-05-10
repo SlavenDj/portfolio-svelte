@@ -8,7 +8,7 @@
 	<h2 class="text-4xl font-semibold">What I Do</h2>
 	<div class="grid justify-between gap-10 grid-cols-smart">
 		<Service>
-			<img src="/fe.svg" alt="" class="max-w-xs" />
+			<enhanced:img src="/fe.svg" alt="" class="max-w-xs" />
 			<h3 class="text-4xl font-medium text-center">Frontend Developer</h3>
 			<p>
 				I specialize in crafting visually appealing and performant web interfaces <Tag
@@ -29,7 +29,7 @@
 			</p>
 		</Service>
 		<Service>
-			<img src="/ui.svg" alt="" class="max-w-xs" />
+			<enhanced:img src="/ui.svg" alt="" class="max-w-xs" />
 			<h3 class="text-4xl font-medium text-center">UI/UX Designer</h3>
 			<p>
 				My forte is in creating intuitive and engaging user interfaces. With a deep understanding of
@@ -39,7 +39,7 @@
 			</p>
 		</Service>
 		<Service>
-			<img src="/be.svg" alt="" class="max-w-xs" />
+			<enhanced:img src="/be.svg" alt="" class="max-w-xs" />
 			<h3 class="text-4xl font-medium text-center">Backend Developer</h3>
 			<p class="">
 				From databases (<Tag icon="logos:postgresql">PostgreSQL</Tag>

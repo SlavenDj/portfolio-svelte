@@ -5,7 +5,7 @@
 </script>
 
 <div class="container">
-	<img src={imageSrc} alt="Card Image" class="image w-36 h-36" />
+	<enhanced:img src={imageSrc} alt="Card Image" class="image w-36 h-36" />
 </div>
 
 <div class="info-container">

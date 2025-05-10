@@ -32,7 +32,7 @@
 			<div class="absolute inset-0 grid place-items-center animate-pulse">loading...</div>
 		{:then value}
 			<div class="absolute bg-white inset-1.5 rounded-3xl">
-				<img
+				<enhanced:img
 					src={value}
 					alt="Preview of {url} on iPhone"
 					class="object-cover w-full h-full rounded-3xl"
@@ -48,9 +48,13 @@
 					<div class="mac_camera" />
 					<div class="relative overflow-hidden rounded-md mac_screen_content">
 						{#await fetchImageURL()}
-							<img class="absolute object-cover h-full animate-pulse" src="/macosbg.jpg" alt="" />
+							<enhanced:img
+								class="absolute object-cover h-full animate-pulse"
+								src="/macosbg.jpg"
+								alt=""
+							/>
 						{:then value}
-							<img
+							<enhanced:img
 								src={value}
 								alt="Preview of {url} on Macbook"
 								class="absolute inset-0 object-cover"
